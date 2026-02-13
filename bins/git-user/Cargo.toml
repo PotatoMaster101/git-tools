@@ -1,0 +1,24 @@
+[package]
+description = "CLI tool for managing git user profiles"
+edition = "2024"
+license = "GPL-3.0-or-later"
+name = "git-user"
+version = "1.0.0"
+
+[package.metadata]
+authors = ["PotatoMaster101"]
+
+[dependencies]
+clap = { workspace = true }
+gix = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+shellexpand = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempdir = { workspace = true }
+
+[[test]]
+name = "functional"
+path = "tests/main.rs"

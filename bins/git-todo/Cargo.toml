@@ -1,0 +1,23 @@
+[package]
+description = "CLI tool for managing TODO lists in git"
+edition = "2024"
+license = "GPL-3.0-or-later"
+name = "git-todo"
+version = "1.0.0"
+
+[package.metadata]
+authors = ["PotatoMaster101"]
+
+[dependencies]
+clap = { workspace = true }
+gix = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempdir = { workspace = true }
+
+[[test]]
+name = "functional"
+path = "tests/main.rs"
